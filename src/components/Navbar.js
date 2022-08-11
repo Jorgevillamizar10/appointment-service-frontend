@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from 'next/image'
 
 export const Navbar = ({ auth, login, register, admin }) => {
   return (
@@ -12,7 +13,7 @@ export const Navbar = ({ auth, login, register, admin }) => {
         <nav className="container w-full flex items-center h-[68px] justify-between text-white font-bold text-md">
           <div className="flex items-center justify-between w-[350px]">
             <Link href="/">
-              <img src="/images/logo-covid.jpg" alt="logo" className="w-[200px] object-cover cursor-pointer"/>
+              <Image src="/images/logo-covid.jpg" alt="logo" height="68px" width="200px" className="object-cover cursor-pointer"/>
             </Link>
             <Link className="cursor-pointer hover:text-[#fd7e14]" href="/">
               Home
@@ -33,19 +34,19 @@ export const Navbar = ({ auth, login, register, admin }) => {
                 <div className="w-auto">
                   {
                     !register &&
-                      <Link className="cursor-pointer hover:text-[#fd7e14] mr-6" href="/registro">
+                      <Link href="/registro">
                         Registrarse
                       </Link>
                   }
                   {
                     !login &&
-                      <Link className="cursor-pointer hover:text-[#fd7e14] mr-6" href="/login">
+                      <Link href="/login">
                         Iniciar Sesion
                       </Link>
                   }
                   {
                     !admin &&
-                      <Link className="cursor-pointer hover:text-[#fd7e14]" href="/admin">
+                      <Link href="/admin">
                         Admin
                       </Link>
                   }
