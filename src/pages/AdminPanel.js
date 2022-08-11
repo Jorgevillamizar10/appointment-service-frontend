@@ -7,7 +7,7 @@ const AdminPanelPage = () => {
       <main className="flex items-center justify-center w-full mt-16">
         <section className="container flex flex-col items-center justify-center h-[60vh]">
           <h3 className="text-[#00528A] text-[30px] font-bold mb-6">Informacion de Usuarios Censados</h3>
-          <table class="table-auto">
+          <table className="table-auto">
             <thead className="bg-[#00528A] border border-black">
               <tr>
                 <th className="text-white border border-black px-3 py-1">Song</th>
