@@ -3,7 +3,7 @@ import { Navbar } from "../components/Navbar"
 const HomePage = () => {
   return (
     <div>
-      <Navbar />
+      <Navbar auth={false} />
       <main className="flex items-center justify-center w-full mt-16">
         <section className="container flex flex-col items-center justify-center">
           <h1 className="text-[#00528A] text-[46px] font-bold underline">Bienvenidos al Sistema de Censo - San Cristobal</h1>

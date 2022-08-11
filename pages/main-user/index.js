@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import MainPage from '../../src/pages/MainPage'
 
-export default function Registro() {
+export default function MainUser() {
   return (
     <div className='bg-[#E0E0E0] h-[100vh]'>
       <Head>
@@ -12,3 +12,5 @@ export default function Registro() {
     </div>
   )
 }
+
+

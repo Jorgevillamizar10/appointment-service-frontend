@@ -45,7 +45,7 @@ const Diagnostic = ({onSetSintomas, sintomas}) => {
   )
 }
 
-const WithOutDiagnostic = () => {
+const WithOutDiagnostic = ({onSetSintomas, sintomas}) => {
   return (
     <div style={{"display": "flex",
       'align-items': 'flex-start',

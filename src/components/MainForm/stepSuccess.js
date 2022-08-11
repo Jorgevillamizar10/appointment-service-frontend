@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"
 
-export const StepSuccess = ({}) => {
+export const StepSuccess = () => {
   const router = useRouter()
 
   return (

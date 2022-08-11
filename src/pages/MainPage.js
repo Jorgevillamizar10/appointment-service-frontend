@@ -26,7 +26,7 @@ const MainPage = () => {
 
   return (
     <div>
-      <Navbar auth={true}/>
+      <Navbar auth={false} login={false} admin={true} register={false}/>
       <main className="flex items-center justify-center w-full mt-16">
         <section className="container flex items-center justify-center h-[60vh]">
           <form className="flex flex-col items-center justify-center">
