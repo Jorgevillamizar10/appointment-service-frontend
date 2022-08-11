@@ -1,5 +1,5 @@
 import { CardNews } from './CardNews'
-import { NewsData } from '../utils/newsData'
+import { NewsData } from '../utils/NewsData'
 
 export const SliderNews = () => {
   return (
