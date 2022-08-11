@@ -1,3 +1,4 @@
+import Link from "next/link"
 
 export const Navbar = ({ auth, login, register, admin }) => {
   return (
@@ -10,43 +11,43 @@ export const Navbar = ({ auth, login, register, admin }) => {
       <div className="w-full bg-[#036BAA] flex flex-col items-center">
         <nav className="container w-full flex items-center h-[68px] justify-between text-white font-bold text-md">
           <div className="flex items-center justify-between w-[350px]">
-            <a href="/">
+            <Link href="/">
               <img src="/images/logo-covid.jpg" alt="logo" className="w-[200px] object-cover cursor-pointer"/>
-            </a>
-            <a className="cursor-pointer hover:text-[#fd7e14]" href="/">
+            </Link>
+            <Link className="cursor-pointer hover:text-[#fd7e14]" href="/">
               Home
-            </a>
+            </Link>
             {
               auth &&
-              <a className="cursor-pointer hover:text-[#fd7e14]" href="/noticias">
+              <Link className="cursor-pointer hover:text-[#fd7e14]" href="/noticias">
                 Noticias
-              </a>
+              </Link>
             }
           </div>
           <div className="flex items-center justify-between w-[320px]">
             {
               auth ?
-                <a className="cursor-pointer hover:text-[#fd7e14]">
+                <Link className="cursor-pointer hover:text-[#fd7e14]">
                   Cerrar Sesion
-                </a> :
+                </Link> :
                 <div className="w-auto">
                   {
                     !register &&
-                      <a className="cursor-pointer hover:text-[#fd7e14] mr-6" href="/registro">
+                      <Link className="cursor-pointer hover:text-[#fd7e14] mr-6" href="/registro">
                         Registrarse
-                      </a>
+                      </Link>
                   }
                   {
                     !login &&
-                      <a className="cursor-pointer hover:text-[#fd7e14] mr-6" href="/login">
+                      <Link className="cursor-pointer hover:text-[#fd7e14] mr-6" href="/login">
                         Iniciar Sesion
-                      </a>
+                      </Link>
                   }
                   {
                     !admin &&
-                      <a className="cursor-pointer hover:text-[#fd7e14]" href="/admin">
+                      <Link className="cursor-pointer hover:text-[#fd7e14]" href="/admin">
                         Admin
-                      </a>
+                      </Link>
                   }
                 </div>
             }
