@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const Diagnostic = ({onSetSintomas, sintomas}) => {
   const [select, setSelect] = useState([])
@@ -6,7 +6,7 @@ const Diagnostic = ({onSetSintomas, sintomas}) => {
   return (
     <div style={{"display": "flex",
       "flexDirection": "column",
-      'align-items': 'center',
+      'alignItems': 'center',
       'padding': '40px 24px',
       'gap': '40px',
       'width': '816px',
@@ -46,10 +46,22 @@ const Diagnostic = ({onSetSintomas, sintomas}) => {
 }
 
 const WithOutDiagnostic = ({onSetSintomas, sintomas}) => {
+
+  useEffect(() => {
+    onSetSintomas([])
+  }, [])
+
+  const onFormCHange = (e) => {
+    onSetSintomas([
+      ...sintomas,
+      e.target.name
+    ])
+  }
+
   return (
     <div style={{"display": "flex",
-      'align-items': 'flex-start',
-      'justify-content': 'space-around',
+      'alignItems': 'flex-start',
+      'justifyContent': 'space-around',
       'padding': '20px 24px',
       'width': '816px',
       'height': '224px',
@@ -59,23 +71,23 @@ const WithOutDiagnostic = ({onSetSintomas, sintomas}) => {
     >
       <div className="flex flex-col items-start justify-center gap-[15px]">
         <label className="cursor-pointer">
-          <input type="radio" placeholder="Tos" className="mr-2" />
+          <input onChange={(e) => onFormCHange(e)} type="radio" name="Fiebre" id="fiebre" className="mr-2" />
           Fiebre
         </label>
         <label className="cursor-pointer">
-          <input type="radio" placeholder="Tos" className="mr-2"/>
+          <input onChange={(e) => onFormCHange(e)} type="radio" name="Erupciones en la piel" id="erupciones" className="mr-2"/>
           Erupciones en la piel
         </label>
         <label className="cursor-pointer">
-          <input type="radio" placeholder="Tos" className="mr-2"/>
+          <input onChange={(e) => onFormCHange(e)} type="radio" name="Dolores musculares" id="musculares" className="mr-2"/>
           Dolores musculares
         </label>
         <label className="cursor-pointer">
-          <input type="radio" placeholder="Tos" className="mr-2"/>
+          <input onChange={(e) => onFormCHange(e)} type="radio" name="Dolor de Cabeza" id="cabeza" className="mr-2"/>
           Dolor de cabeza
         </label>
         <label className="cursor-pointer">
-          <input type="radio" placeholder="Tos" className="mr-2"/>
+          <input onChange={(e) => onFormCHange(e)} type="radio" name="Vomito" id="vomito" className="mr-2"/>
           Vómito
         </label>
       </div>
@@ -88,8 +100,7 @@ const WithOutDiagnostic = ({onSetSintomas, sintomas}) => {
 }
 
 
-export const StepTwo = ({option}) => {
-  const [sintomas, setSintomas] = useState([])
+export const StepTwo = ({ option, sintomas, setSintomas }) => {
 
   const onRenderCaseTwo = (option) => {
     switch(option) {

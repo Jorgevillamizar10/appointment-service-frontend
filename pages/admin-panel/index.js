@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import AdminPanelPage from '../../src/pages/AdminPanel'
 
-export default function AdminPanel() {
+export default function AdminPanel(props) {
   return (
     <div>
       <Head>
@@ -11,4 +11,10 @@ export default function AdminPanel() {
       <AdminPanelPage />
     </div>
   )
+}
+
+export async function getServerSideProps(context) {
+  return {
+    props: {}, // will be passed to the page component as props
+  }
 }

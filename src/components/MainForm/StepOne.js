@@ -3,7 +3,7 @@ export const StepOne = ({onHandleOption}) => {
   return (
     <div style={{"display": "flex",
       "flexDirection": "column",
-      'align-items': 'center',
+      'alignItems': 'center',
       'padding': '40px 24px',
       'gap': '40px',
       'width': '816px',

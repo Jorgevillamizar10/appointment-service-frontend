@@ -6,7 +6,7 @@ export const StepSuccess = () => {
   return (
     <div style={{"display": "flex",
       "flexDirection": "column",
-      'align-items': 'center',
+      'alignItems': 'center',
       'padding': '40px 24px',
       'gap': '10px',
       'width': '816px',

@@ -6,7 +6,7 @@ import { SliderNews } from "../components/SliderNews"
 const NewsPage = () => {
   return (
     <div>
-      <Navbar auth={false} />
+      <Navbar />
       <Banner />
       <SliderNews />
     </div>
